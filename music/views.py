@@ -18,4 +18,9 @@ class DetailsView(generic.DetailView):
     model = Album
 
 
+#ModelForms Simplest way to create forms
+#It automatically genreate form html, adds the forms requests to database automatically
+class AlbumCreate(CreateView):
+    model = Album
+    fields = ['artist', 'album_title', 'genre', 'album_logo']
 
